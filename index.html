@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom - Grant Writing & Lead Generation Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #0a0a12;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        header {
+            padding: 2rem 0;
+            border-bottom: 1px solid #1a1a2e;
+            position: sticky;
+            top: 0;
+            background: rgba(10, 10, 18, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 50%, #fbbf24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .header-nav {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #e0e0e0;
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        
+        .nav-link:hover {
+            color: #0ea5e9;
+        }
+        
+        .cta-primary {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 50%, #fbbf24 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(14, 165, 233, 0.3);
+        }
+        
+        .hero {
+            padding: 8rem 0;
+            text-align: center;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            line-height: 1.2;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: #a0a0a0;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-cta {
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 50%, #fbbf24 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(14, 165, 233, 0.4);
+        }
+        
+        .section {
+            padding: 6rem 0;
+            border-top: 1px solid #1a1a2e;
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        
+        .testimonial-card {
+            background: #1a1a2e;
+            padding: 2rem;
+            border-radius: 8px;
+            border-left: 4px solid #0ea5e9;
+        }
+        
+        .testimonial-card:nth-child(2) {
+            border-left-color: #10b981;
+        }
+        
+        .testimonial-card:nth-child(3) {
+            border-left-color: #fbbf24;
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        
+        .testimonial-info h4 {
+            color: #ffffff;
+            margin-bottom: 0.2rem;
+        }
+        
+        .testimonial-stat {
+            color: #0ea5e9;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-text {
+            color: #a0a0a0;
+            font-style: italic;
+            margin-top: 1rem;
+        }
+        
+        .form-section {
+            background: #1a1a2e;
+            padding: 4rem;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .form-section h2 {
+            color: #ffffff;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #e0e0e0;
+            font-weight: 600;
+        }
+        
+        input[type="text"],
+        input[type="email"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            background: #0a0a12;
+            border: 1px solid #2a2a3e;
+            border-radius: 6px;
+            color: #e0e0e0;
+            font-family: inherit;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+        
+        input[type="text"]:focus,
+        input[type="email"]:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #0ea5e9;
+            background: #0f0f1a;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+        }
+        
+        .service-options {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-option {
+            padding: 1rem;
+            border: 2px solid #2a2a3e;
+            border-radius: 6px;
+            background: transparent;
+            color: #e0e0e0;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.2s;
+            text-align: center;
+        }
+        
+        .service-option:hover {
+            border-color: #0ea5e9;
+            background: rgba(14, 165, 233, 0.1);
+        }
+        
+        .service-option.selected {
+            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 100%);
+            border-color: #0ea5e9;
+            color: white;
+        }
+        
+        .form-submit {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #10b981 50%, #fbbf24 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .form-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 24px rgba(14, 165, 233, 0.4);
+        }
+        
+        .pricing-card {
+            background: #1a1a2e;
+            padding: 2.5rem;
+            border-radius: 8px;
+            border: 1px solid #2a2a3e;
+            text-align: center;
+        }
+        
+        .pricing-card.featured {
+            border: 2px solid #0ea5e9;
+            position: relative;
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #0ea5e9;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #0ea5e9;
+            margin: 1rem 0;
+        }
+        
+        .price-period {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+        
+        .price-list {
+            text-align: left;
+            margin: 2rem 0;
+            list-style: none;
+        }
+        
+        .price-list li {
+            padding: 0.5rem 0;
+            color: #a0a0a0;
+            border-bottom: 1px solid #2a2a3e;
+        }
+        
+        .price-list li:before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        
+        .faq-section {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 2rem;
+            border-bottom: 1px solid #1a1a2e;
+            padding-bottom: 2rem;
+        }
+        
+        .faq-question {
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        
+        .faq-answer {
+            color: #a0a0a0;
+            line-height: 1.8;
+        }
+        
+        footer {
+            border-top: 1px solid #1a1a2e;
+            padding: 3rem 0;
+            text-align: center;
+            color: #606070;
+            font-size: 0.9rem;
+        }
+        
+        .success-message {
+            display: none;
+            background: rgba(16, 185, 129, 0.1);
+            border: 1px solid #10b981;
+            border-radius: 6px;
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+            color: #10b981;
+            text-align: center;
+        }
+        
+        .success-message.show {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .service-options {
+                grid-template-columns: 1fr;
+            }
+            
+            .header-nav {
+                gap: 1rem;
+            }
+            
+            .nav-link {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">WISDOM</div>
+                <div class="header-nav">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <button class="cta-primary" onclick="document.getElementById('email-form').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <h1>Stop hunting for grants.<br>Start winning them.</h1>
+            <p class="hero-subtitle">Expert grant writing and B2B lead generation that converts.</p>
+            <button class="hero-cta" onclick="document.getElementById('email-form').scrollIntoView({behavior: 'smooth'})">Book a consultation</button>
+        </div>
+    </section>
+    
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">Results speak louder</h2>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">A</div>
+                        <div class="testimonial-info">
+                            <h4>Andrea (Nonprofit)</h4>
+                            <div class="testimonial-stat">25-funder pipeline</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Complete grant strategy delivered in 2 weeks. We now have a clear roadmap to $500K+ in annual funding."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-info">
+                            <h4>Marcus (SaaS)</h4>
+                            <div class="testimonial-stat">150+ qualified leads</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Lead gen campaign brought in 150 high-intent prospects. 12 turned into sales conversations within 30 days."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">J</div>
+                        <div class="testimonial-info">
+                            <h4>James (Startup)</h4>
+                            <div class="testimonial-stat">6 RFP wins</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Positioned us to win 3 government contracts worth $180K+. The strategy paid for itself 10x over."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="email-form">
+        <div class="container">
+            <div class="form-section">
+                <h2>Let's work together</h2>
+                <div id="successMessage" class="success-message">
+                    Got your details. Expect an email within 24 hours.
+                </div>
+                <form id="contactForm" action="https://formspree.io/f/xyzgkpkb" method="POST">
+                    <div class="form-group">
+                        <label for="name">Your name</label>
+                        <input type="text" id="name" name="name" placeholder="John Doe" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email address</label>
+                        <input type="email" id="email" name="email" placeholder="you@company.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>What do you need?</label>
+                        <div class="service-options">
+                            <div class="service-option" onclick="selectService(this, 'Grant Writing')">Grant Writing</div>
+                            <div class="service-option" onclick="selectService(this, 'Lead Generation')">Lead Generation</div>
+                        </div>
+                        <input type="hidden" id="service" name="service" value="">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Tell me about your project</label>
+                        <textarea id="message" name="message" placeholder="What are you looking to achieve?" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="form-submit">Book consultation</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple pricing</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; max-width: 900px; margin: 0 auto;">
+                <div class="pricing-card">
+                    <h3 style="color: #ffffff; margin-bottom: 1rem;">Grant Writing</h3>
+                    <div class="price">Custom</div>
+                    <p class="price-period">based on scope</p>
+                    <ul class="price-list">
+                        <li>Grant research & pipeline</li>
+                        <li>Strategy session</li>
+                        <li>Proposal writing</li>
+                        <li>Unlimited revisions</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card featured">
+                    <div class="pricing-badge">Most popular</div>
+                    <h3 style="color: #ffffff; margin-bottom: 1rem;">Lead Generation</h3>
+                    <div class="price">$1,500</div>
+                    <p class="price-period">for 100 qualified leads</p>
+                    <ul class="price-list">
+                        <li>Multi-channel sourcing</li>
+                        <li>Contact verification</li>
+                        <li>Lead tracking sheet</li>
+                        <li>30-day support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Common questions</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">How long does a grant strategy take?</div>
+                    <div class="faq-answer">Typically 2-4 weeks depending on complexity. I'll give you a clear timeline after our initial consultation.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What's your success rate with grant applications?</div>
+                    <div class="faq-answer">170+ projects completed with strong award rates. Success depends on your organization's fit and the funder match.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Can you help with specific grant types?</div>
+                    <div class="faq-answer">Yes. Federal, foundation, state, corporate grants. I've worked across nonprofits, startups, and government contracting.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How are leads qualified?</div>
+                    <div class="faq-answer">I source from public data, LinkedIn, industry directories, and custom research. Each lead includes contact info and fit notes.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What's included in lead generation?</div>
+                    <div class="faq-answer">Full contact list, verified emails, company research, niche classification, and ongoing support for your outreach.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Wisdom. Let's turn your goals into results.</p>
+        </div>
+    </footer>
+    
+    <script>
+        function selectService(element, service) {
+            const allOptions = element.parentElement.querySelectorAll('.service-option');
+            allOptions.forEach(opt => opt.classList.remove('selected'));
+            element.classList.add('selected');
+            document.getElementById('service').value = service;
+        }
+        
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = new FormData(this);
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    document.getElementById('successMessage').classList.add('show');
+                    this.reset();
+                    document.querySelectorAll('.service-option').forEach(opt => opt.classList.remove('selected'));
+                    setTimeout(() => {
+                        document.getElementById('successMessage').classList.remove('show');
+                    }, 5000);
+                }
+            }).catch(error => console.error('Error:', error));
+        });
+    </script>
+</body>
+</html>
