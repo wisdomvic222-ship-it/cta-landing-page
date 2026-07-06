@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wisdom | Lead Generation & Sales Development Specialist</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, #0f172a 0%, #1a1f3a 100%);
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        header {
+            padding: 2rem 0;
+            border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+            position: sticky;
+            top: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -1px;
+        }
+        
+        .header-nav {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+        }
+        
+        .nav-link {
+            color: #a0a0a0;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: #0ea5e9;
+        }
+        
+        .cta-primary {
+            padding: 10px 24px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.2);
+        }
+        
+        .cta-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+        }
+        
+        .hero {
+            padding: 8rem 0 6rem;
+            text-align: center;
+        }
+        
+        .hero-label {
+            display: inline-block;
+            padding: 8px 16px;
+            background: rgba(14, 165, 233, 0.1);
+            border: 1px solid rgba(14, 165, 233, 0.3);
+            border-radius: 20px;
+            color: #0ea5e9;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 1.5rem;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            font-weight: 800;
+            margin-bottom: 1.5rem;
+            color: #ffffff;
+            line-height: 1.1;
+            letter-spacing: -2px;
+        }
+        
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 50%, #10b981 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.25rem;
+            color: #a0a0a0;
+            max-width: 700px;
+            margin: 0 auto 3rem;
+            line-height: 1.8;
+        }
+        
+        .hero-cta {
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.2);
+        }
+        
+        .hero-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+        }
+        
+        .section {
+            padding: 6rem 0;
+            border-top: 1px solid rgba(14, 165, 233, 0.05);
+        }
+        
+        .section-title {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            text-align: center;
+            letter-spacing: -1px;
+        }
+        
+        .section-subtitle {
+            font-size: 1.1rem;
+            color: #a0a0a0;
+            text-align: center;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .testimonials {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+        
+        .testimonial-card {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+            padding: 2rem;
+            border-radius: 12px;
+            border-left: 4px solid #0ea5e9;
+            border: 1px solid rgba(14, 165, 233, 0.15);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:nth-child(2) {
+            border-left-color: #06b6d4;
+        }
+        
+        .testimonial-card:nth-child(3) {
+            border-left-color: #10b981;
+        }
+        
+        .testimonial-card:nth-child(4) {
+            border-left-color: #fbbf24;
+        }
+        
+        .testimonial-card:hover {
+            border-color: rgba(14, 165, 233, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(14, 165, 233, 0.15);
+        }
+        
+        .testimonial-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        
+        .testimonial-avatar {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: 700;
+            font-size: 1.3rem;
+        }
+        
+        .testimonial-avatar:nth-child(2) {
+            background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+        }
+        
+        .testimonial-avatar:nth-child(3) {
+            background: linear-gradient(135deg, #10b981 0%, #fbbf24 100%);
+        }
+        
+        .testimonial-avatar:nth-child(4) {
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+        }
+        
+        .testimonial-info h4 {
+            color: #ffffff;
+            margin-bottom: 0.2rem;
+        }
+        
+        .testimonial-stat {
+            color: #0ea5e9;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        
+        .testimonial-text {
+            color: #a0a0a0;
+            font-style: italic;
+            margin-top: 1rem;
+            line-height: 1.7;
+        }
+        
+        .contact-section {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+            padding: 4rem;
+            border-radius: 12px;
+            max-width: 700px;
+            margin: 0 auto;
+            border: 1px solid rgba(14, 165, 233, 0.15);
+            text-align: center;
+        }
+        
+        .contact-section h2 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+        
+        .contact-section p {
+            color: #a0a0a0;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .contact-btn {
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(14, 165, 233, 0.2);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .contact-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
+        }
+        
+        .pricing-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: linear-gradient(135deg, rgba(14, 165, 233, 0.05) 0%, rgba(6, 182, 212, 0.05) 100%);
+            padding: 2.5rem;
+            border-radius: 12px;
+            border: 1px solid rgba(14, 165, 233, 0.15);
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            border-color: rgba(14, 165, 233, 0.4);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(14, 165, 233, 0.15);
+        }
+        
+        .price {
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #0ea5e9 0%, #06b6d4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin: 1rem 0;
+        }
+        
+        .price-period {
+            color: #a0a0a0;
+            font-size: 0.9rem;
+        }
+        
+        .price-list {
+            text-align: left;
+            margin: 2rem 0;
+            list-style: none;
+        }
+        
+        .price-list li {
+            padding: 0.8rem 0;
+            color: #a0a0a0;
+            border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+            font-size: 0.95rem;
+        }
+        
+        .price-list li:before {
+            content: "✓ ";
+            color: #10b981;
+            font-weight: 700;
+            margin-right: 0.5rem;
+        }
+        
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .faq-item {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2.5rem;
+            border-bottom: 1px solid rgba(14, 165, 233, 0.1);
+        }
+        
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+        
+        .faq-question {
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 1rem;
+            font-size: 1.15rem;
+        }
+        
+        .faq-answer {
+            color: #a0a0a0;
+            line-height: 1.8;
+        }
+        
+        footer {
+            border-top: 1px solid rgba(14, 165, 233, 0.1);
+            padding: 3rem 0;
+            text-align: center;
+            color: #606070;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+            }
+            
+            .header-nav {
+                gap: 1rem;
+            }
+            
+            .nav-link {
+                display: none;
+            }
+            
+            .contact-buttons {
+                flex-direction: column;
+            }
+            
+            .contact-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">WISDOM</div>
+                <div class="header-nav">
+                    <a href="#about" class="nav-link">About</a>
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                    <a href="#faq" class="nav-link">FAQ</a>
+                    <button class="cta-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container">
+            <div class="hero-label">LEAD GENERATION & SALES DEVELOPMENT</div>
+            <h1>Stop hunting for leads.<br>Start <span class="highlight">FILLING PIPELINES</span>.</h1>
+            <p class="hero-subtitle">Expert lead generation and B2B/SaaS outreach that converts. Multi-channel prospecting, cold email sequences, and LinkedIn Sales Navigator expertise.</p>
+            <button class="hero-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Book a consultation</button>
+        </div>
+    </section>
+    
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-title">Results Speak Louder</h2>
+            <p class="section-subtitle">Real outcomes from lead generation and sales development campaigns</p>
+            <div class="testimonials">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">S</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah (SaaS Founder)</h4>
+                            <div class="testimonial-stat">150+ qualified leads</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Wisdom built a targeted lead list and executed a 5-email sequence. We got 150 qualified leads in 3 weeks. 8 of them became customers. Best investment we made for our SaaS product."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">M</div>
+                        <div class="testimonial-info">
+                            <h4>Marcus (B2B Services)</h4>
+                            <div class="testimonial-stat">320 connections, 28% response</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"LinkedIn outreach campaign was incredible. 320 connections with a 28% response rate. We booked 12 demos in the first month. Wisdom knows exactly how to position B2B services."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">J</div>
+                        <div class="testimonial-info">
+                            <h4>James (Enterprise SaaS)</h4>
+                            <div class="testimonial-stat">6 enterprise deals closed</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Multi-channel campaign targeting C-suite executives. Wisdom's research and personalization were next level. We closed 6 enterprise deals worth $240K. ROI was 15x."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">A</div>
+                        <div class="testimonial-info">
+                            <h4>Amara (B2B SaaS)</h4>
+                            <div class="testimonial-stat">40% email open rate</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Cold email campaign with 40% open rate and 9% reply rate. Wisdom's sequences were personalized and relevant. We filled our pipeline for Q3 in just 4 weeks."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="contact">
+        <div class="container">
+            <div class="contact-section">
+                <h2>Let's Work Together</h2>
+                <p>Ready to build a pipeline that converts? Get in touch and let's discuss your lead generation needs.</p>
+                <div class="contact-buttons">
+                    <a href="mailto:wisdomvic222@gmail.com" class="contact-btn">
+                        <span>📧</span> Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/wisdom-obinna-540395219/" target="_blank" class="contact-btn">
+                        <span>🔗</span> LinkedIn Profile
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Simple Pricing</h2>
+            <p class="section-subtitle">Flexible packages tailored to your lead generation needs</p>
+            <div class="pricing-cards">
+                <div class="pricing-card">
+                    <h3 style="color: #ffffff; margin-bottom: 1rem;">Lead List</h3>
+                    <div class="price">Custom</div>
+                    <p class="price-period">based on volume</p>
+                    <ul class="price-list">
+                        <li>Multi-channel sourcing</li>
+                        <li>Contact verification</li>
+                        <li>Firmographic data</li>
+                        <li>30-day support</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3 style="color: #ffffff; margin-bottom: 1rem;">Lead Generation Campaign</h3>
+                    <div class="price">Custom</div>
+                    <p class="price-period">end-to-end solution</p>
+                    <ul class="price-list">
+                        <li>ICP & account research</li>
+                        <li>List build & enrichment</li>
+                        <li>Outreach sequencing</li>
+                        <li>30-day support & optimization</li>
+                    </ul>
+                </div>
+                
+                <div class="pricing-card">
+                    <h3 style="color: #ffffff; margin-bottom: 1rem;">Full Pipeline</h3>
+                    <div class="price">Custom</div>
+                    <p class="price-period">enterprise solution</p>
+                    <ul class="price-list">
+                        <li>Strategy & planning</li>
+                        <li>List building & enrichment</li>
+                        <li>Email & LinkedIn sequences</li>
+                        <li>60-day ongoing support</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section class="section" id="faq">
+        <div class="container">
+            <h2 class="section-title">Common Questions</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">How long does a lead generation campaign take?</div>
+                    <div class="faq-answer">Typically 2-4 weeks depending on complexity. List building and research take priority; I'll give you a clear timeline after our initial consultation.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What types of leads can you generate?</div>
+                    <div class="faq-answer">B2B and SaaS decision-makers, C-level executives, department heads, and other high-intent prospects. I specialize in B2B and SaaS lead generation across all enterprise sectors.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What industries do you work with?</div>
+                    <div class="faq-answer">I've worked across SaaS, B2B services, startups, and enterprise companies. If you're selling B2B or SaaS, I can help build your pipeline.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">How are leads qualified?</div>
+                    <div class="faq-answer">I source from public data, LinkedIn, industry directories, and custom research. Each lead includes contact info, company research, and fit assessment.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">What's included in lead generation?</div>
+                    <div class="faq-answer">Full contact list, verified emails, company research, niche classification, and ongoing support for your outreach and optimization.</div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">Do you do revisions?</div>
+                    <div class="faq-answer">Yes. Unlimited revisions until you're satisfied. My goal is your success, not just delivery.</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Wisdom. Lead Generation & Sales Development Specialist for B2B and SaaS. <a href="/" style="color: #0ea5e9; text-decoration: none;">Back to top</a>.</p>
+        </div>
+    </footer>
+</body>
+</html>
