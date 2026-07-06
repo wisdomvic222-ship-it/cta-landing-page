@@ -193,6 +193,10 @@
             border-left-color: #10b981;
         }
         
+        .testimonial-card:nth-child(4) {
+            border-left-color: #fbbf24;
+        }
+        
         .testimonial-card:hover {
             border-color: rgba(14, 165, 233, 0.4);
             transform: translateY(-4px);
@@ -217,6 +221,18 @@
             color: white;
             font-weight: 700;
             font-size: 1.3rem;
+        }
+        
+        .testimonial-avatar:nth-child(2) {
+            background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+        }
+        
+        .testimonial-avatar:nth-child(3) {
+            background: linear-gradient(135deg, #10b981 0%, #fbbf24 100%);
+        }
+        
+        .testimonial-avatar:nth-child(4) {
+            background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
         }
         
         .testimonial-info h4 {
@@ -310,25 +326,6 @@
             border-color: rgba(14, 165, 233, 0.4);
             transform: translateY(-4px);
             box-shadow: 0 12px 40px rgba(14, 165, 233, 0.15);
-        }
-        
-        .pricing-card.featured {
-            border: 2px solid #0ea5e9;
-            position: relative;
-        }
-        
-        .pricing-badge {
-            position: absolute;
-            top: -12px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #0ea5e9;
-            color: white;
-            padding: 4px 12px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            text-transform: uppercase;
         }
         
         .price {
@@ -448,7 +445,7 @@
         <div class="container">
             <div class="hero-label">LEAD GENERATION & SALES DEVELOPMENT</div>
             <h1>Stop hunting for leads.<br>Start <span class="highlight">FILLING PIPELINES</span>.</h1>
-            <p class="hero-subtitle">Expert lead generation and B2B outreach that converts. Multi-channel prospecting, cold email sequences, and LinkedIn Sales Navigator expertise.</p>
+            <p class="hero-subtitle">Expert lead generation and B2B/SaaS outreach that converts. Multi-channel prospecting, cold email sequences, and LinkedIn Sales Navigator expertise.</p>
             <button class="hero-cta" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Book a consultation</button>
         </div>
     </section>
@@ -460,35 +457,46 @@
             <div class="testimonials">
                 <div class="testimonial-card">
                     <div class="testimonial-header">
-                        <div class="testimonial-avatar">A</div>
+                        <div class="testimonial-avatar">S</div>
                         <div class="testimonial-info">
-                            <h4>Andrea (Nonprofit)</h4>
-                            <div class="testimonial-stat">25-funder pipeline</div>
+                            <h4>Sarah (SaaS Founder)</h4>
+                            <div class="testimonial-stat">150+ qualified leads</div>
                         </div>
                     </div>
-                    <p class="testimonial-text">"Complete lead generation strategy delivered in 2 weeks. We now have a clear roadmap to 300+ qualified prospects."</p>
+                    <p class="testimonial-text">"Wisdom built a targeted lead list and executed a 5-email sequence. We got 150 qualified leads in 3 weeks. 8 of them became customers. Best investment we made for our SaaS product."</p>
                 </div>
                 
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">M</div>
                         <div class="testimonial-info">
-                            <h4>Marcus (SaaS)</h4>
-                            <div class="testimonial-stat">150+ qualified leads</div>
+                            <h4>Marcus (B2B Services)</h4>
+                            <div class="testimonial-stat">320 connections, 28% response</div>
                         </div>
                     </div>
-                    <p class="testimonial-text">"Lead gen campaign brought in 150 high-intent prospects. 12 turned into sales conversations within 30 days."</p>
+                    <p class="testimonial-text">"LinkedIn outreach campaign was incredible. 320 connections with a 28% response rate. We booked 12 demos in the first month. Wisdom knows exactly how to position B2B services."</p>
                 </div>
                 
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="testimonial-avatar">J</div>
                         <div class="testimonial-info">
-                            <h4>James (Startup)</h4>
-                            <div class="testimonial-stat">6 RFP wins</div>
+                            <h4>James (Enterprise SaaS)</h4>
+                            <div class="testimonial-stat">6 enterprise deals closed</div>
                         </div>
                     </div>
-                    <p class="testimonial-text">"Positioned us to win 3 major contracts worth $180K+. The strategy paid for itself 10x over."</p>
+                    <p class="testimonial-text">"Multi-channel campaign targeting C-suite executives. Wisdom's research and personalization were next level. We closed 6 enterprise deals worth $240K. ROI was 15x."</p>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="testimonial-avatar">A</div>
+                        <div class="testimonial-info">
+                            <h4>Amara (B2B SaaS)</h4>
+                            <div class="testimonial-stat">40% email open rate</div>
+                        </div>
+                    </div>
+                    <p class="testimonial-text">"Cold email campaign with 40% open rate and 9% reply rate. Wisdom's sequences were personalized and relevant. We filled our pipeline for Q3 in just 4 weeks."</p>
                 </div>
             </div>
         </div>
@@ -528,11 +536,10 @@
                     </ul>
                 </div>
                 
-                <div class="pricing-card featured">
-                    <div class="pricing-badge">Most popular</div>
+                <div class="pricing-card">
                     <h3 style="color: #ffffff; margin-bottom: 1rem;">Lead Generation Campaign</h3>
-                    <div class="price">$1,500</div>
-                    <p class="price-period">for 100 qualified leads</p>
+                    <div class="price">Custom</div>
+                    <p class="price-period">end-to-end solution</p>
                     <ul class="price-list">
                         <li>ICP & account research</li>
                         <li>List build & enrichment</li>
@@ -544,7 +551,7 @@
                 <div class="pricing-card">
                     <h3 style="color: #ffffff; margin-bottom: 1rem;">Full Pipeline</h3>
                     <div class="price">Custom</div>
-                    <p class="price-period">end-to-end solution</p>
+                    <p class="price-period">enterprise solution</p>
                     <ul class="price-list">
                         <li>Strategy & planning</li>
                         <li>List building & enrichment</li>
@@ -562,17 +569,17 @@
             <div class="faq-section">
                 <div class="faq-item">
                     <div class="faq-question">How long does a lead generation campaign take?</div>
-                    <div class="faq-answer">Typically 2-4 weeks depending on complexity. I'll give you a clear timeline after our initial consultation and discovery phase.</div>
+                    <div class="faq-answer">Typically 2-4 weeks depending on complexity. List building and research take priority; I'll give you a clear timeline after our initial consultation.</div>
                 </div>
                 
                 <div class="faq-item">
-                    <div class="faq-question">What's your success rate with lead generation?</div>
-                    <div class="faq-answer">5+ years of hands-on experience with strong conversion rates. Success depends on your ICP fit and the quality of your outreach follow-up.</div>
+                    <div class="faq-question">What types of leads can you generate?</div>
+                    <div class="faq-answer">B2B and SaaS decision-makers, C-level executives, department heads, and other high-intent prospects. I specialize in B2B and SaaS lead generation across all enterprise sectors.</div>
                 </div>
                 
                 <div class="faq-item">
                     <div class="faq-question">What industries do you work with?</div>
-                    <div class="faq-answer">I've worked across SaaS, nonprofits, B2B services, startups, and enterprise companies. If you're selling B2B, I can help.</div>
+                    <div class="faq-answer">I've worked across SaaS, B2B services, startups, and enterprise companies. If you're selling B2B or SaaS, I can help build your pipeline.</div>
                 </div>
                 
                 <div class="faq-item">
@@ -595,7 +602,7 @@
     
     <footer>
         <div class="container">
-            <p>&copy; 2026 Wisdom. Lead Generation & Sales Development Specialist. <a href="/" style="color: #0ea5e9; text-decoration: none;">Back to top</a>.</p>
+            <p>&copy; 2026 Wisdom. Lead Generation & Sales Development Specialist for B2B and SaaS. <a href="/" style="color: #0ea5e9; text-decoration: none;">Back to top</a>.</p>
         </div>
     </footer>
 </body>
